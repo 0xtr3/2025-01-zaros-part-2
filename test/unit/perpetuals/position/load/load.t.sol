@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
 
 contract Position_Load_Unit_Test is Base_Test {
     function setUp() public override {

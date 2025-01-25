@@ -3,15 +3,15 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { Log as AutomationLog } from "@zaros/external/chainlink/interfaces/ILogAutomation.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
-import { MarketOrderKeeper } from "@zaros/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
-import { IStreamsLookupCompatible } from "@zaros/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { Log as AutomationLog } from "src/external/chainlink/interfaces/ILogAutomation.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
+import { MarketOrderKeeper } from "src/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
+import { IStreamsLookupCompatible } from "src/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
 
 // PRB Math dependencies
-import { ud60x18 } from "@prb-math/UD60x18.sol";
+import { ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract MarketOrderKeeper_CheckLog_Integration_Test is Base_Test {
     function setUp() public override {

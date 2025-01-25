@@ -5,11 +5,11 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { Referral } from "@zaros/referral/Referral.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Referral } from "src/referral/Referral.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract Referral_ConfigureEngine_Integration_Test is Base_Test {
     function setUp() public virtual override {

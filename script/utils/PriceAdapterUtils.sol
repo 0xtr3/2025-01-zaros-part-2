@@ -2,13 +2,13 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { PriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { PriceAdapter } from "src/utils/PriceAdapter.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 library PriceAdapterUtils {
     function deployPriceAdapter(PriceAdapter.InitializeParams memory params)

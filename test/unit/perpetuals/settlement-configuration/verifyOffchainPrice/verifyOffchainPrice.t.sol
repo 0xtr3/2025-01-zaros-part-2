@@ -3,12 +3,12 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract SettlementConfiguration_VerifyOffchainPrice_Unit_Test is Base_Test {
     function setUp() public override {

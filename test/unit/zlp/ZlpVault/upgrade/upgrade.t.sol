@@ -3,12 +3,12 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
-import { ZlpVault } from "@zaros/zlp/ZlpVault.sol";
+import { ZlpVault } from "src/zlp/ZlpVault.sol";
 
 // Open Zeppelin dependencies
-import { IERC1967 } from "@openzeppelin/interfaces/IERC1967.sol";
-import { UUPSUpgradeable } from "@openzeppelin-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
+import { IERC1967 } from "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol";
+import { UUPSUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
 
 contract ZlpVault_Upgrade_Test is Base_Test {
     function setUp() public virtual override {

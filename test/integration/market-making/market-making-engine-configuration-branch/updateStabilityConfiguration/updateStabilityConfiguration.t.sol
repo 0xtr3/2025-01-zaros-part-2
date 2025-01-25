@@ -3,8 +3,8 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { StabilityConfiguration } from "@zaros/market-making/leaves/StabilityConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { StabilityConfiguration } from "src/market-making/leaves/StabilityConfiguration.sol";
 
 contract MarketMakingEngineConfigurationBranch_UpdateStabilityConfiguration_Integration_Test is Base_Test {
     function setUp() public override {

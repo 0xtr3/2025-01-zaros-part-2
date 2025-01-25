@@ -3,11 +3,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { BaseKeeper } from "@zaros/external/chainlink/keepers/BaseKeeper.sol";
+import { BaseKeeper } from "src/external/chainlink/keepers/BaseKeeper.sol";
 import { BaseScript } from "script/Base.s.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 contract SetForwarders is BaseScript {
     function run(address[] calldata keepers, address[] calldata forwarders) public broadcaster {

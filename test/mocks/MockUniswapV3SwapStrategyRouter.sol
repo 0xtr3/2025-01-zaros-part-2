@@ -2,11 +2,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IUniswapV3RouterInterface } from "@zaros/utils/interfaces/IUniswapV3RouterInterface.sol";
-import { Path } from "@zaros/utils/libraries/Path.sol";
+import { IUniswapV3RouterInterface } from "src/utils/interfaces/IUniswapV3RouterInterface.sol";
+import { Path } from "src/utils/libraries/Path.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
 
 /// @title mock Uniswap V2 Swap Strategy Router
 /// @notice Router for stateless execution of swaps against Uniswap V2

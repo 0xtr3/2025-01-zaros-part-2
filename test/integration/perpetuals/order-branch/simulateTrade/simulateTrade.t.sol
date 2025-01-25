@@ -2,20 +2,20 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 contract SimulateTradeIntegrationTest is Base_Test {
     using SafeCast for int256;

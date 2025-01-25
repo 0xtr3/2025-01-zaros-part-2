@@ -3,10 +3,10 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Referral } from "@zaros/referral/Referral.sol";
+import { Referral } from "src/referral/Referral.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract CreateCustomReferralCode_Integration_Test is Base_Test {
     function setUp() public override {

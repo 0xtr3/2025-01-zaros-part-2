@@ -5,13 +5,13 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { Errors } from "@zaros/utils/Errors.sol";
-import { VaultRouterBranch } from "@zaros/market-making/branches/VaultRouterBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { VaultRouterBranch } from "src/market-making/branches/VaultRouterBranch.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
-import { IERC20Errors } from "@openzeppelin/contracts/interfaces/draft-IERC6093.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
+import { IERC20Errors } from "lib/openzeppelin-contracts/contracts/contracts/interfaces/draft-IERC6093.sol";
 
 contract InitiateWithdraw_Integration_Test is Base_Test {
     using SafeCast for uint256;

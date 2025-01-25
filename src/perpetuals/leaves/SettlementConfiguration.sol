@@ -2,17 +2,17 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { PremiumReport } from "@zaros/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { FeeAsset } from "@zaros/external/chainlink/interfaces/IFeeManager.sol";
-import { ChainlinkUtil } from "@zaros/external/chainlink/ChainlinkUtil.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { PremiumReport } from "src/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { FeeAsset } from "src/external/chainlink/interfaces/IFeeManager.sol";
+import { ChainlinkUtil } from "src/external/chainlink/ChainlinkUtil.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 /// @notice Settlement strategies supported by the protocol.
 library SettlementConfiguration {

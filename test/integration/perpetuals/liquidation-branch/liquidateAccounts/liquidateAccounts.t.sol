@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { LiquidationBranch } from "@zaros/perpetuals/branches/LiquidationBranch.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { LiquidationBranch } from "src/perpetuals/branches/LiquidationBranch.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract LiquidateAccounts_Integration_Test is Base_Test {
     function setUp() public override {

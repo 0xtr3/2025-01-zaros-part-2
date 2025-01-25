@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
 
 contract MarketOrderHarness {
     function exposed_MarketOrder_load(uint128 tradingAccountId) external pure returns (MarketOrder.Data memory) {

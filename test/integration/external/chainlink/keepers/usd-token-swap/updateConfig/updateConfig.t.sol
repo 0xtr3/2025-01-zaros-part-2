@@ -3,8 +3,8 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { UsdTokenSwapKeeper } from "@zaros/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { UsdTokenSwapKeeper } from "src/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 contract UsdTokenSwapKeeper_UpdateConfig_Integration_Test is Base_Test {
     function setUp() public override {

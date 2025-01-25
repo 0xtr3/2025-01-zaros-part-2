@@ -3,9 +3,9 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 import { BaseScript } from "script/Base.s.sol";
 import { ProtocolConfiguration } from "script/utils/ProtocolConfiguration.sol";
 

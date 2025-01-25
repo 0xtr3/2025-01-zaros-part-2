@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { IPriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { IPriceAdapter } from "src/utils/PriceAdapter.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 library Collateral {
     using MarketMakingEngineConfiguration for MarketMakingEngineConfiguration.Data;

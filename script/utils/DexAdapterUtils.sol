@@ -2,19 +2,19 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { UniswapV3Adapter } from "@zaros/utils/dex-adapters/UniswapV3Adapter.sol";
-import { SwapAssetConfigData } from "@zaros/utils/dex-adapters/BaseAdapter.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { UniswapV2Adapter } from "@zaros/utils/dex-adapters/UniswapV2Adapter.sol";
-import { CurveAdapter } from "@zaros/utils/dex-adapters/CurveAdapter.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
+import { UniswapV3Adapter } from "src/utils/dex-adapters/UniswapV3Adapter.sol";
+import { SwapAssetConfigData } from "src/utils/dex-adapters/BaseAdapter.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { UniswapV2Adapter } from "src/utils/dex-adapters/UniswapV2Adapter.sol";
+import { CurveAdapter } from "src/utils/dex-adapters/CurveAdapter.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 /// @notice Dex Adapter Utils
 contract DexAdapterUtils {

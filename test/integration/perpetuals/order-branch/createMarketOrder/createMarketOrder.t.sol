@@ -2,20 +2,20 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, unary } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, unary } from "lib/prb-math/src/SD59x18.sol";
 
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
 
 contract CreateMarketOrder_Integration_Test is Base_Test {
     using SafeCast for int256;

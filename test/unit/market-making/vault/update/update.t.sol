@@ -5,8 +5,8 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 contract Vault_Update_Unit_Test is Base_Test {
     function setUp() public virtual override {

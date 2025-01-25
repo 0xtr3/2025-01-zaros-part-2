@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IEngine } from "@zaros/market-making/interfaces/IEngine.sol";
+import { IEngine } from "src/market-making/interfaces/IEngine.sol";
 import { OrderFees } from "../leaves/OrderFees.sol";
 import { Position } from "../leaves/Position.sol";
 import { PerpMarket } from "../leaves/PerpMarket.sol";
 import { SettlementConfiguration } from "../leaves/SettlementConfiguration.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, unary, ZERO as SD59x18_ZERO } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, unary, ZERO as SD59x18_ZERO } from "lib/prb-math/src/SD59x18.sol";
 
 /// @title Perps Engine Branch.
 /// @notice The perps engine  is responsible by the state management of perps markets.

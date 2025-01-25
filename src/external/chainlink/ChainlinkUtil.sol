@@ -3,18 +3,18 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { IAggregatorV3 } from "@zaros/external/chainlink/interfaces/IAggregatorV3.sol";
-import { IFeeManager, FeeAsset } from "@zaros/external/chainlink/interfaces/IFeeManager.sol";
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { IOffchainAggregator } from "@zaros/external/chainlink/interfaces/IOffchainAggregator.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { IAggregatorV3 } from "src/external/chainlink/interfaces/IAggregatorV3.sol";
+import { IFeeManager, FeeAsset } from "src/external/chainlink/interfaces/IFeeManager.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { IOffchainAggregator } from "src/external/chainlink/interfaces/IOffchainAggregator.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 library ChainlinkUtil {
     using SafeCast for int256;

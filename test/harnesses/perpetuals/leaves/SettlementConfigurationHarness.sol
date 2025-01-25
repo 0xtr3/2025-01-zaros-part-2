@@ -2,10 +2,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/TradingAccount.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/TradingAccount.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract SettlementConfigurationHarness {
     function exposed_SettlementConfiguration_load(

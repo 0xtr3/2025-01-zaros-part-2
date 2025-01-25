@@ -2,11 +2,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 /// @title The PerpsEngineConfiguration namespace.
 library PerpsEngineConfiguration {

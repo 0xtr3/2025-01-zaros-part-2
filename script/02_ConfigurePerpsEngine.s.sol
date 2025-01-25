@@ -3,16 +3,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { TradingAccountNFT } from "@zaros/trading-account-nft/TradingAccountNFT.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
+import { TradingAccountNFT } from "src/trading-account-nft/TradingAccountNFT.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
 import { LimitedMintingERC20 } from "testnet/LimitedMintingERC20.sol";
 import { BaseScript } from "./Base.s.sol";
 import { ProtocolConfiguration } from "./utils/ProtocolConfiguration.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 contract ConfigurePerpsEngine is BaseScript, ProtocolConfiguration {
     /*//////////////////////////////////////////////////////////////////////////

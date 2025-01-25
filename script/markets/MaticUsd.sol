@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
 
 abstract contract MaticUsd {
     /// @notice MATICUSD market configuration parameters.

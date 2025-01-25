@@ -3,17 +3,17 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { UsdTokenSwapKeeper } from "@zaros/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
-import { Log as AutomationLog } from "@zaros/external/chainlink/interfaces/ILogAutomation.sol";
-import { IStreamsLookupCompatible } from "@zaros/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
-import { IPriceAdapter } from "@zaros/utils/PriceAdapter.sol";
-import { IERC4626 } from "@openzeppelin/interfaces/IERC4626.sol";
+import { UsdTokenSwapKeeper } from "src/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
+import { Log as AutomationLog } from "src/external/chainlink/interfaces/ILogAutomation.sol";
+import { IStreamsLookupCompatible } from "src/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
+import { IPriceAdapter } from "src/utils/PriceAdapter.sol";
+import { IERC4626 } from "lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol";
 
 // PRB Math dependencies
-import { ud60x18, UD60x18 } from "@prb-math/UD60x18.sol";
+import { ud60x18, UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
 contract UsdTokenSwapKeeper_CheckLog_Integration_Test is Base_Test {
     function setUp() public override {

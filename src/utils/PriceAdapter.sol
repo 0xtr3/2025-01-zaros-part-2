@@ -3,16 +3,16 @@
 pragma solidity 0.8.25;
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 // Zaros dependencies
-import { IAggregatorV3 } from "@zaros/external/chainlink/interfaces/IAggregatorV3.sol";
-import { ChainlinkUtil } from "@zaros/external/chainlink/ChainlinkUtil.sol";
-import { IPriceAdapter } from "@zaros/utils/interfaces/IPriceAdapter.sol";
+import { IAggregatorV3 } from "src/external/chainlink/interfaces/IAggregatorV3.sol";
+import { ChainlinkUtil } from "src/external/chainlink/ChainlinkUtil.sol";
+import { IPriceAdapter } from "src/utils/interfaces/IPriceAdapter.sol";
 
 // Open Zeppelin dependencies
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
-import { UUPSUpgradeable } from "@openzeppelin-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
+import { UUPSUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 contract PriceAdapter is IPriceAdapter, OwnableUpgradeable, UUPSUpgradeable {
     /*//////////////////////////////////////////////////////////////////////////

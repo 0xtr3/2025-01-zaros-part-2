@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies test
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { UsdTokenSwapKeeper } from "@zaros/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
+import { UsdTokenSwapKeeper } from "src/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 contract UsdTokenSwapKeeper_Initialize_Integration_Test is Base_Test {
     function setUp() public override {

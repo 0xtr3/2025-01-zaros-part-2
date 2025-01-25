@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Market, UD60x18 } from "@zaros/market-making/leaves/Market.sol";
+import { Market, UD60x18 } from "src/market-making/leaves/Market.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 // PRBMath dependencies
-import { SD59x18 } from "@prb-math/SD59x18.sol";
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract MarketHarness {
     using EnumerableMap for EnumerableMap.AddressToUintMap;

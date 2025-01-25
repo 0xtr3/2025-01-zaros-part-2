@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { Distribution } from "@zaros/market-making/leaves/Distribution.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { Distribution } from "src/market-making/leaves/Distribution.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 // PRBMath dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, unary } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, unary } from "lib/prb-math/src/SD59x18.sol";
 
 contract VaultHarness {
     using EnumerableSet for EnumerableSet.UintSet;

@@ -2,21 +2,21 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { FeeRecipients } from "@zaros/perpetuals/leaves/FeeRecipients.sol";
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
-import { TradingAccount } from "@zaros/perpetuals/leaves/TradingAccount.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { FeeRecipients } from "src/perpetuals/leaves/FeeRecipients.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { TradingAccount } from "src/perpetuals/leaves/TradingAccount.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "lib/prb-math/src/SD59x18.sol";
 
 contract LiquidationBranch {
     using EnumerableSet for EnumerableSet.UintSet;

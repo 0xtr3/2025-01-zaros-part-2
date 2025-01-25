@@ -3,10 +3,10 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { BaseScript } from "../Base.s.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 /// @dev This script creates a list of custom referral codes for a list of referrers
 contract CreateListOfCustomReferrals is BaseScript {

@@ -3,30 +3,30 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { LimitedMintingERC20 } from "testnet/LimitedMintingERC20.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { OffchainOrder } from "@zaros/perpetuals/leaves/OffchainOrder.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
-import { TradingAccount } from "@zaros/perpetuals/leaves/TradingAccount.sol";
-import { FeeRecipients } from "@zaros/perpetuals/leaves/FeeRecipients.sol";
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { OffchainOrder } from "src/perpetuals/leaves/OffchainOrder.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
+import { TradingAccount } from "src/perpetuals/leaves/TradingAccount.sol";
+import { FeeRecipients } from "src/perpetuals/leaves/FeeRecipients.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
 
 // Open Zeppelin dependencies
-import { ECDSA } from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { SafeERC20, IERC20 } from "@openzeppelin/token/ERC20/utils/SafeERC20.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { ECDSA } from "lib/openzeppelin-contracts/contracts/contracts/utils/cryptography/ECDSA.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { SafeERC20, IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // Open Zeppelin Upgradeable dependencies
-import { EIP712Upgradeable } from "@openzeppelin-upgradeable/utils/cryptography/EIP712Upgradeable.sol";
+import { EIP712Upgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "lib/prb-math/src/SD59x18.sol";
 
 contract SettlementBranch is EIP712Upgradeable {
     using EnumerableSet for EnumerableSet.UintSet;

@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { IPriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { IPriceAdapter } from "src/utils/PriceAdapter.sol";
 
 // PRB Math dependencies
-import { ud60x18, UD60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { ud60x18, UD60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract GetAccountEquityUsd_Integration_Test is Base_Test {
     function setUp() public override {

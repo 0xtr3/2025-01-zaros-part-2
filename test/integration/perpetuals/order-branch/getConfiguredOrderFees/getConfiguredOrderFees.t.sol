@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
 
 contract GetConfiguredOrderFees_Integration_Test is Base_Test {
     function setUp() public override {

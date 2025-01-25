@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SwapExactInputSinglePayload, SwapExactInputPayload } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { ICurveSwapRouter } from "@zaros/utils/interfaces/ICurveSwapRouter.sol";
-import { BaseAdapter } from "@zaros/utils/dex-adapters/BaseAdapter.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Path } from "@zaros/utils/libraries/Path.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SwapExactInputSinglePayload, SwapExactInputPayload } from "src/utils/interfaces/IDexAdapter.sol";
+import { ICurveSwapRouter } from "src/utils/interfaces/ICurveSwapRouter.sol";
+import { BaseAdapter } from "src/utils/dex-adapters/BaseAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Path } from "src/utils/libraries/Path.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 
 /// @notice Curve Finance adapter contract
 contract CurveAdapter is BaseAdapter {

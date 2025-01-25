@@ -2,10 +2,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 contract PerpsEngineConfigurationHarness {
     using EnumerableSet for EnumerableSet.UintSet;

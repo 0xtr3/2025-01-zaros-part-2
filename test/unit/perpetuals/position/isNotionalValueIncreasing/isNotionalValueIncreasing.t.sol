@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract Position_IsNotionalValueIncreasing_Unit_Test is Base_Test {
     function setUp() public override {

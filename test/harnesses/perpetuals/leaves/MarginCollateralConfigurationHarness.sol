@@ -2,10 +2,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { MarginCollateralConfiguration } from "@zaros/perpetuals/leaves/MarginCollateralConfiguration.sol";
+import { MarginCollateralConfiguration } from "src/perpetuals/leaves/MarginCollateralConfiguration.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract MarginCollateralConfigurationHarness {
     function workaround_getTotalDeposited(address collateralType) external view returns (uint256) {

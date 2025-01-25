@@ -2,11 +2,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract PerpMarketHarness {
     function exposed_PerpMarket_load(uint128 marketId) external pure returns (PerpMarket.Data memory) {

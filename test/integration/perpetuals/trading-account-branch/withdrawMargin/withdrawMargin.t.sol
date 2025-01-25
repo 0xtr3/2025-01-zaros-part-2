@@ -4,14 +4,14 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract WithdrawMargin_Integration_Test is Base_Test {
     function setUp() public override {

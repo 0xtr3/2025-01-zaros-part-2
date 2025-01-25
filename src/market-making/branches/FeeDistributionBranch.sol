@@ -2,26 +2,26 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { EngineAccessControl } from "@zaros/utils/EngineAccessControl.sol";
-import { SwapExactInputSinglePayload, SwapExactInputPayload } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { Distribution } from "@zaros/market-making/leaves/Distribution.sol";
-import { AssetSwapPath } from "@zaros/market-making/leaves/AssetSwapPath.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { EngineAccessControl } from "src/utils/EngineAccessControl.sol";
+import { SwapExactInputSinglePayload, SwapExactInputPayload } from "src/utils/interfaces/IDexAdapter.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { Distribution } from "src/market-making/leaves/Distribution.sol";
+import { AssetSwapPath } from "src/market-making/leaves/AssetSwapPath.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Market } from "src/market-making/leaves/Market.sol";
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
+import { DexSwapStrategy } from "src/market-making/leaves/DexSwapStrategy.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin dependencies
-import { IERC20, SafeERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { IERC20, SafeERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 /// @dev This contract deals with ETH to settle accumulated protocol fees, distributed to LPs and stakeholders.
 contract FeeDistributionBranch is EngineAccessControl {

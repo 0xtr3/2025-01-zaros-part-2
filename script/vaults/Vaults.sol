@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { ZlpVault } from "@zaros/zlp/ZlpVault.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { ZlpVault } from "src/zlp/ZlpVault.sol";
 import { MarginCollaterals } from "script/margin-collaterals/MarginCollaterals.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { UsdTokenSwapKeeper } from "@zaros/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { UsdTokenSwapKeeper } from "src/external/chainlink/keepers/usd-token-swap-keeper/UsdTokenSwapKeeper.sol";
 
 // Forge dependencies
-import { StdCheats, StdUtils } from "forge-std/Test.sol";
+import { StdCheats, StdUtils } from "lib/forge-std/src/Test.sol";
 
 // Vaults
 import { UsdcCoreVault } from "./UsdcCoreVault.sol";
@@ -35,8 +35,8 @@ import { WstEthDegenVault } from "./WstEthDegenVault.sol";
 import { WstEthBluechipVault } from "./WstEthBluechipVault.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 enum VaultTypes {
     Core, // 0

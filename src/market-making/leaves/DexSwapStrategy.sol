@@ -4,11 +4,11 @@ pragma solidity 0.8.25;
 // Zaros dependencies
 import {
     IDexAdapter, SwapExactInputSinglePayload, SwapExactInputPayload
-} from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+} from "src/utils/interfaces/IDexAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 /// @notice DexSwapStrategy library for executing swaps on a DEX.
 library DexSwapStrategy {

@@ -2,8 +2,8 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
+import { DexSwapStrategy } from "src/market-making/leaves/DexSwapStrategy.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";

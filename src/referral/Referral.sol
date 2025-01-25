@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { ReferralConfiguration } from "@zaros/referral/leaves/ReferralConfiguration.sol";
-import { CustomReferralConfiguration } from "@zaros/referral/leaves/CustomReferralConfiguration.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { ReferralConfiguration } from "src/referral/leaves/ReferralConfiguration.sol";
+import { CustomReferralConfiguration } from "src/referral/leaves/CustomReferralConfiguration.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
-import { UUPSUpgradeable } from "@openzeppelin-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
+import { UUPSUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 /// @notice Referral contract.
 /// @dev This contract is responsible for managing referrals.

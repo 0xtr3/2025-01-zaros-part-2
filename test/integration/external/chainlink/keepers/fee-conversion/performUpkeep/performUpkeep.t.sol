@@ -3,8 +3,8 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { FeeConversionKeeper } from "@zaros/external/chainlink/keepers/fee-conversion-keeper/FeeConversionKeeper.sol";
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
+import { FeeConversionKeeper } from "src/external/chainlink/keepers/fee-conversion-keeper/FeeConversionKeeper.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
 
 contract FeeConversionKeeper_PerformUpkeep_Integration_Test is Base_Test {
     function setUp() public virtual override {

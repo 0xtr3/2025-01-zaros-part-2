@@ -3,17 +3,17 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { IPriceAdapter } from "@zaros/utils/interfaces/IPriceAdapter.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Math } from "src/utils/Math.sol";
+import { IPriceAdapter } from "src/utils/interfaces/IPriceAdapter.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin dependencies
-import { ERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
-import { IERC4626 } from "@openzeppelin/interfaces/IERC4626.sol";
+import { ERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import { IERC4626 } from "lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol";
 
 contract GetVaultCreditCapacity_Integration_Test is Base_Test {
     function setUp() public virtual override {

@@ -3,16 +3,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { MarketOrderKeeper } from "@zaros/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
+import { MarketOrderKeeper } from "src/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
 import { LimitedMintingERC20 } from "testnet/LimitedMintingERC20.sol";
 import { BaseScript } from "../Base.s.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
-import { UUPSUpgradeable } from "@openzeppelin/proxy/utils/UUPSUpgradeable.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
+import { UUPSUpgradeable } from "lib/openzeppelin-contracts/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 contract UpgradeUUPS is BaseScript {
     /*//////////////////////////////////////////////////////////////////////////

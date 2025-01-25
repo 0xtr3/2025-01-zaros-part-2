@@ -5,9 +5,9 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
 
 contract CreditDelegationBranch_SettleVaultsDebt_Integration_Test is Base_Test {
     function setUp() public virtual override {

@@ -3,11 +3,11 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 
 // PRB Math dependencies
-import { ud60x18 } from "@prb-math/UD60x18.sol";
+import { ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract CheckPendingOrder_Unit_Test is Base_Test {
     function setUp() public override {

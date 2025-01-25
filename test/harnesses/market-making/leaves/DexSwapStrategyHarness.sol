@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
+import { DexSwapStrategy } from "src/market-making/leaves/DexSwapStrategy.sol";
 
 contract DexSwapStrategyHarness {
     function exposed_dexSwapStrategy_load(uint128 dexSwapStrategyId)

@@ -2,21 +2,21 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
 import { MockPriceFeed } from "../../test/mocks/MockPriceFeed.sol";
-import { MarketOrderKeeper } from "@zaros/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
-import { PriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { MarketOrderKeeper } from "src/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { PriceAdapter } from "src/utils/PriceAdapter.sol";
 import { PriceAdapterUtils } from "script/utils/PriceAdapterUtils.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
 // Forge dependencies
-import { StdCheats, StdUtils } from "forge-std/Test.sol";
+import { StdCheats, StdUtils } from "lib/forge-std/src/Test.sol";
 
 // Markets
 import { BtcUsd } from "./BtcUsd.sol";
@@ -31,8 +31,8 @@ import { LtcUsd } from "./LtcUsd.sol";
 import { FtmUsd } from "./FtmUsd.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 abstract contract Markets is
     StdCheats,

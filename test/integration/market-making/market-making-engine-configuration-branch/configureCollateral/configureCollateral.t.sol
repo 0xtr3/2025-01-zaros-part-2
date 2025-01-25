@@ -2,17 +2,17 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract MarketMakingEngineConfigurationBranch_ConfigureCollateral_Integration_Test is Base_Test {
     function setUp() public virtual override {

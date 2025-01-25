@@ -3,7 +3,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { UsdToken } from "@zaros/usd/UsdToken.sol";
+import { UsdToken } from "src/usd/UsdToken.sol";
 
 contract MockUsdToken is UsdToken {
     constructor(

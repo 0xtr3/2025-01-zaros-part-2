@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
-import { IAutomationCompatible } from "@zaros/external/chainlink/interfaces/IAutomationCompatible.sol";
+import { DexSwapStrategy } from "../../../../../src/market-making/leaves/DexSwapStrategy.sol";
+import { IAutomationCompatible } from "../../../../../src/external/chainlink/interfaces/IAutomationCompatible.sol";
 import { BaseKeeper } from "../BaseKeeper.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { IMarketMakingEngine } from "../../../../../src/market-making/MarketMakingEngine.sol";
+import { Errors } from "../../../../../src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
 
 contract FeeConversionKeeper is IAutomationCompatible, BaseKeeper {
     using EnumerableMap for EnumerableMap.AddressToUintMap;

@@ -3,11 +3,11 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 
 contract Stake_Integration_Test is Base_Test {
     function setUp() public virtual override {

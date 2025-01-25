@@ -5,7 +5,7 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract GetMaxOpenInterest_Integration_Test is Base_Test {
     function setUp() public override {

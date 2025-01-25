@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Forge dependencies
-import { Script } from "forge-std/Script.sol";
+import { Script } from "lib/forge-std/src/Script.sol";
 
 abstract contract BaseScript is Script {
     /// @dev Included to enable compilation of the script without a $PRIVATE_KEY environment variable.

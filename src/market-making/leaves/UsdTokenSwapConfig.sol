@@ -2,8 +2,8 @@
 pragma solidity 0.8.25;
 
 // PRB Math dependencies
-import { UD60x18, UNIT as UD60x18_UNIT, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, ZERO as SD59x18_ZERO } from "@prb-math/SD59x18.sol";
+import { UD60x18, UNIT as UD60x18_UNIT, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, ZERO as SD59x18_ZERO } from "lib/prb-math/src/SD59x18.sol";
 
 library UsdTokenSwapConfig {
     /// @notice ERC7201 storage location.

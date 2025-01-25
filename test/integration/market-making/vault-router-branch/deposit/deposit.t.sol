@@ -5,18 +5,18 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { VaultRouterBranch } from "@zaros/market-making/branches/VaultRouterBranch.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
+import { VaultRouterBranch } from "src/market-making/branches/VaultRouterBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
-import { ERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
-import { ERC4626Upgradeable } from "@openzeppelin-upgradeable/token/ERC20/extensions/ERC4626Upgradeable.sol";
-import { IERC4626 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import { ERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import { ERC4626Upgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/ERC4626Upgradeable.sol";
+import { IERC4626 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
 
 // PRB Math
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract Deposit_Integration_Test is Base_Test {
     function setUp() public virtual override {

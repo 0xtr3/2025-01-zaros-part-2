@@ -2,13 +2,13 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract GetOpenInterest_Integration_Test is Base_Test {
     function setUp() public override {

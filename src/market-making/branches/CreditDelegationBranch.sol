@@ -2,26 +2,26 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { EngineAccessControl } from "@zaros/utils/EngineAccessControl.sol";
-import { SwapExactInputSinglePayload, SwapExactInputPayload } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { UsdToken } from "@zaros/usd/UsdToken.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
-import { Market } from "@zaros/market-making/leaves/Market.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { UsdTokenSwapConfig } from "@zaros/market-making/leaves/UsdTokenSwapConfig.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { EngineAccessControl } from "src/utils/EngineAccessControl.sol";
+import { SwapExactInputSinglePayload, SwapExactInputPayload } from "src/utils/interfaces/IDexAdapter.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
+import { UsdToken } from "src/usd/UsdToken.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { DexSwapStrategy } from "src/market-making/leaves/DexSwapStrategy.sol";
+import { Market } from "src/market-making/leaves/Market.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { UsdTokenSwapConfig } from "src/market-making/leaves/UsdTokenSwapConfig.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
-import { IERC20, SafeERC20 } from "@openzeppelin/token/ERC20/utils/SafeERC20.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
+import { IERC20, SafeERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, ZERO as SD59x18_ZERO, unary } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, ZERO as SD59x18_ZERO, unary } from "lib/prb-math/src/SD59x18.sol";
 
 /// @dev This contract deals with USDC to settle protocol debt, used to back USD Token
 contract CreditDelegationBranch is EngineAccessControl {

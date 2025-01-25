@@ -2,24 +2,24 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { FeeRecipients } from "@zaros/perpetuals/leaves/FeeRecipients.sol";
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
-import { MarginCollateralConfiguration } from "@zaros/perpetuals/leaves/MarginCollateralConfiguration.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
-import { Position } from "@zaros/perpetuals/leaves/Position.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { FeeRecipients } from "src/perpetuals/leaves/FeeRecipients.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { MarginCollateralConfiguration } from "src/perpetuals/leaves/MarginCollateralConfiguration.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
+import { Position } from "src/perpetuals/leaves/Position.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
 
 // Open Zeppelin dependencies
-import { SafeERC20, IERC20 } from "@openzeppelin/token/ERC20/utils/SafeERC20.sol";
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeERC20, IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, ZERO as SD59x18_ZERO, unary } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, ZERO as UD60x18_ZERO } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, ZERO as SD59x18_ZERO, unary } from "lib/prb-math/src/SD59x18.sol";
 
 /// @title The TradingAccount namespace.
 library TradingAccount {

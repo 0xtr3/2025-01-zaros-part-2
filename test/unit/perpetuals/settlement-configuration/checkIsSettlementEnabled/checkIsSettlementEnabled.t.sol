@@ -3,8 +3,8 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
 
 contract SettlementConfiguration_CheckIsSettlementEnabled_Unit_Test is Base_Test {
     function setUp() public override {

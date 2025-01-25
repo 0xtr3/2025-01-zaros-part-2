@@ -5,7 +5,7 @@ pragma solidity 0.8.25;
 import { BaseScript } from "../Base.s.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 struct TradingAccountData {
     address sender;

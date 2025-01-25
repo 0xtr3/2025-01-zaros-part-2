@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { FeeAsset } from "@zaros/external/chainlink/interfaces/IFeeManager.sol";
+import { FeeAsset } from "src/external/chainlink/interfaces/IFeeManager.sol";
 
 contract MockChainlinkFeeManager {
     function getFeeAndReward(

@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { WithdrawalRequest } from "@zaros/market-making/leaves/WithdrawalRequest.sol";
+import { WithdrawalRequest } from "src/market-making/leaves/WithdrawalRequest.sol";
 
 contract WithdrawalRequestHarness {
     function exposed_WithdrawalRequest_load(

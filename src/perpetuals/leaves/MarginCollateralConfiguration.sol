@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { IPriceAdapter } from "@zaros/utils/PriceAdapter.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
+import { IPriceAdapter } from "src/utils/PriceAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 library MarginCollateralConfiguration {
     /// @notice ERC7201 storage location.

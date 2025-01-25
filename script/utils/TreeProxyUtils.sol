@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
-import { UpgradeBranch } from "@zaros/tree-proxy/branches/UpgradeBranch.sol";
-import { LookupBranch } from "@zaros/tree-proxy/branches/LookupBranch.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
-import { LiquidationBranch } from "@zaros/perpetuals/branches/LiquidationBranch.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { PerpMarketBranch } from "@zaros/perpetuals/branches/PerpMarketBranch.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
-import { SettlementBranch } from "@zaros/perpetuals/branches/SettlementBranch.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
+import { UpgradeBranch } from "src/tree-proxy/branches/UpgradeBranch.sol";
+import { LookupBranch } from "src/tree-proxy/branches/LookupBranch.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { LiquidationBranch } from "src/perpetuals/branches/LiquidationBranch.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { PerpMarketBranch } from "src/perpetuals/branches/PerpMarketBranch.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
+import { SettlementBranch } from "src/perpetuals/branches/SettlementBranch.sol";
 import { TradingAccountBranchTestnet } from "testnet/branches/TradingAccountBranchTestnet.sol";
 import { PerpsEngineConfigurationHarness } from "test/harnesses/perpetuals/leaves/PerpsEngineConfigurationHarness.sol";
 import { MarginCollateralConfigurationHarness } from
@@ -22,13 +22,13 @@ import { PositionHarness } from "test/harnesses/perpetuals/leaves/PositionHarnes
 import { SettlementConfigurationHarness } from "test/harnesses/perpetuals/leaves/SettlementConfigurationHarness.sol";
 import { TradingAccountHarness } from "test/harnesses/perpetuals/leaves/TradingAccountHarness.sol";
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
-import { VaultRouterBranch } from "@zaros/market-making/branches/VaultRouterBranch.sol";
-import { StabilityBranch } from "@zaros/market-making/branches/StabilityBranch.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+import { VaultRouterBranch } from "src/market-making/branches/VaultRouterBranch.sol";
+import { StabilityBranch } from "src/market-making/branches/StabilityBranch.sol";
 import { VaultHarness } from "test/harnesses/market-making/leaves/VaultHarness.sol";
 import { WithdrawalRequestHarness } from "test/harnesses/market-making/leaves/WithdrawalRequestHarness.sol";
-import { CreditDelegationBranch } from "@zaros/market-making/branches/CreditDelegationBranch.sol";
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
+import { CreditDelegationBranch } from "src/market-making/branches/CreditDelegationBranch.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
 import { CollateralHarness } from "test/harnesses/market-making/leaves/CollateralHarness.sol";
 import { DistributionHarness } from "test/harnesses/market-making/leaves/DistributionHarness.sol";
 import { MarketHarness } from "test/harnesses/market-making/leaves/MarketHarness.sol";
@@ -39,11 +39,11 @@ import { CollateralHarness } from "test/harnesses/market-making/leaves/Collatera
 import { StabilityConfigurationHarness } from "test/harnesses/market-making/leaves/StabilityConfigurationHarness.sol";
 
 // Open Zeppelin Upgradeable dependencies
-import { EIP712Upgradeable } from "@openzeppelin-upgradeable/utils/cryptography/EIP712Upgradeable.sol";
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
+import { EIP712Upgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/EIP712Upgradeable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
 
 // Forge dependencies
-import { console } from "forge-std/console.sol";
+import { console } from "lib/forge-std/src/console.sol";
 
 // Perps Engine
 

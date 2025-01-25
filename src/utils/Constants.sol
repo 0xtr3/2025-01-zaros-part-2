@@ -3,7 +3,7 @@
 pragma solidity 0.8.25;
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 /// @notice Constants used across the protocol.
 library Constants {

@@ -10,11 +10,11 @@ import { WstEth } from "script/margin-collaterals/WstEth.sol";
 import { WeEth } from "script/margin-collaterals/WeEth.sol";
 
 // Zaros dependencies
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 import { MockERC20 } from "test/mocks/MockERC20.sol";
 import { MockUsdToken } from "test/mocks/MockUsdToken.sol";
 import { MockPriceFeed } from "test/mocks/MockPriceFeed.sol";
-import { PriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { PriceAdapter } from "src/utils/PriceAdapter.sol";
 import { PriceAdapterUtils } from "script/utils/PriceAdapterUtils.sol";
 
 abstract contract MarginCollaterals is UsdToken, Usdc, WEth, WBtc, WstEth, WeEth {

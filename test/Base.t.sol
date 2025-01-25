@@ -3,35 +3,35 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies source
-import { TradingAccountNFT } from "@zaros/trading-account-nft/TradingAccountNFT.sol";
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
-import { PerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { TradingAccountNFT } from "src/trading-account-nft/TradingAccountNFT.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
+import { PerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 import { MockEngine } from "test/mocks/MockEngine.sol";
-import { IPerpsEngine as IPerpsEngineBranches } from "@zaros/perpetuals/PerpsEngine.sol";
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { PremiumReport } from "@zaros/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { FeeRecipients } from "@zaros/perpetuals/leaves/FeeRecipients.sol";
-import { IFeeManager } from "@zaros/external/chainlink/interfaces/IFeeManager.sol";
-import { PriceAdapter } from "@zaros/utils/PriceAdapter.sol";
-import { MarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
+import { IPerpsEngine as IPerpsEngineBranches } from "src/perpetuals/PerpsEngine.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { PremiumReport } from "src/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { Math } from "src/utils/Math.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { FeeRecipients } from "src/perpetuals/leaves/FeeRecipients.sol";
+import { IFeeManager } from "src/external/chainlink/interfaces/IFeeManager.sol";
+import { PriceAdapter } from "src/utils/PriceAdapter.sol";
+import { MarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
-import { MarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { IMarketMakingEngine as IMarketMakingEngineBranches } from "@zaros/market-making/MarketMakingEngine.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { PriceAdapter } from "@zaros/utils/PriceAdapter.sol";
-import { UniswapV3Adapter } from "@zaros/utils/dex-adapters/UniswapV3Adapter.sol";
-import { UniswapV2Adapter } from "@zaros/utils/dex-adapters/UniswapV2Adapter.sol";
-import { CurveAdapter } from "@zaros/utils/dex-adapters/CurveAdapter.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
-import { SwapAssetConfigData } from "@zaros/utils/dex-adapters/BaseAdapter.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { Whitelist } from "@zaros/utils/Whitelist.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+import { MarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
+import { IMarketMakingEngine as IMarketMakingEngineBranches } from "src/market-making/MarketMakingEngine.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { PriceAdapter } from "src/utils/PriceAdapter.sol";
+import { UniswapV3Adapter } from "src/utils/dex-adapters/UniswapV3Adapter.sol";
+import { UniswapV2Adapter } from "src/utils/dex-adapters/UniswapV2Adapter.sol";
+import { CurveAdapter } from "src/utils/dex-adapters/CurveAdapter.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
+import { SwapAssetConfigData } from "src/utils/dex-adapters/BaseAdapter.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
+import { Whitelist } from "src/utils/Whitelist.sol";
 
 // Zaros dependencies test
 import { MockPriceFeed } from "test/mocks/MockPriceFeed.sol";
@@ -40,7 +40,7 @@ import { MockUsdToken } from "test/mocks/MockUsdToken.sol";
 import { Storage } from "test/utils/Storage.sol";
 import { Users, User } from "test/utils/Types.sol";
 import { MockERC20 } from "test/mocks/MockERC20.sol";
-import { ZlpVault } from "@zaros/zlp/ZlpVault.sol";
+import { ZlpVault } from "src/zlp/ZlpVault.sol";
 import { PerpsEngineConfigurationHarness } from "test/harnesses/perpetuals/leaves/PerpsEngineConfigurationHarness.sol";
 import { MarginCollateralConfigurationHarness } from
     "test/harnesses/perpetuals/leaves/MarginCollateralConfigurationHarness.sol";
@@ -86,19 +86,19 @@ import { DexAdapterUtils } from "script/utils/DexAdapterUtils.sol";
 import { ReferralUtils } from "script/utils/ReferralUtils.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
-import { ERC20, IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
+import { ERC20, IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { SD59x18, sd59x18, unary } from "@prb-math/SD59x18.sol";
-import { UD60x18, ud60x18, uMAX_UD60x18 } from "@prb-math/UD60x18.sol";
+import { SD59x18, sd59x18, unary } from "lib/prb-math/src/SD59x18.sol";
+import { UD60x18, ud60x18, uMAX_UD60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 // PRB Test dependencies
-import { PRBTest } from "@prb-test/PRBTest.sol";
+import { PRBTest } from "lib/prb-test/src/PRBTest.sol";
 
 // Forge dependencies
-import { StdCheats, StdUtils } from "forge-std/Test.sol";
+import { StdCheats, StdUtils } from "lib/forge-std/src/Test.sol";
 
 abstract contract IPerpsEngine is
     IPerpsEngineBranches,

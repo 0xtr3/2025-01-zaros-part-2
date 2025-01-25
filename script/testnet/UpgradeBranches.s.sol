@@ -3,15 +3,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
 import { TradingAccountBranchTestnet } from "testnet/branches/TradingAccountBranchTestnet.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
-import { PerpMarketBranch } from "@zaros/perpetuals/branches/PerpMarketBranch.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
-import { SettlementBranch } from "@zaros/perpetuals/branches/SettlementBranch.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
-import { PerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
+import { PerpMarketBranch } from "src/perpetuals/branches/PerpMarketBranch.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { SettlementBranch } from "src/perpetuals/branches/SettlementBranch.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
+import { PerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 import { BaseScript } from "script/Base.s.sol";
 
 contract UpgradeBranches is BaseScript {

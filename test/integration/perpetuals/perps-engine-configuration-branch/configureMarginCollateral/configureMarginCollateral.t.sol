@@ -2,10 +2,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
 import { MockERC20 } from "test/mocks/MockERC20.sol";
 import { MockERC20WithNoDecimals } from "test/mocks/MockERC20WithNoDecimals.sol";
 import { MockERC20WithZeroDecimals } from "test/mocks/MockERC20WithZeroDecimals.sol";

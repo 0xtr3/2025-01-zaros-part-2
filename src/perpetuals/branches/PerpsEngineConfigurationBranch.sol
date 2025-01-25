@@ -2,23 +2,23 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
-import { MarginCollateralConfiguration } from "@zaros/perpetuals/leaves/MarginCollateralConfiguration.sol";
-import { MarketConfiguration } from "@zaros/perpetuals/leaves/MarketConfiguration.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
+import { MarginCollateralConfiguration } from "src/perpetuals/leaves/MarginCollateralConfiguration.sol";
+import { MarketConfiguration } from "src/perpetuals/leaves/MarketConfiguration.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
 
 // PRB Math dependencies
-import { sd59x18 } from "@prb-math/SD59x18.sol";
+import { sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin Upgradeable dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { ERC20, IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { ERC20, IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
 
 /// @title Perps Engine Configuration Branch.
 /// @notice This  is used by the protocol controller to configure the perps

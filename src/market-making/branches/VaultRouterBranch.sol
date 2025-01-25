@@ -2,26 +2,26 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { WithdrawalRequest } from "@zaros/market-making/leaves/WithdrawalRequest.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Distribution } from "@zaros/market-making/leaves/Distribution.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { Whitelist } from "@zaros/utils/Whitelist.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { WithdrawalRequest } from "src/market-making/leaves/WithdrawalRequest.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Distribution } from "src/market-making/leaves/Distribution.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { Math } from "src/utils/Math.sol";
+import { Whitelist } from "src/utils/Whitelist.sol";
 
 // Open Zeppelin dependencies
-import { IERC20, IERC4626, SafeERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
-import { Math as MathOpenZeppelin } from "@openzeppelin/contracts/utils/math/Math.sol";
-import { IERC20Metadata } from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
+import { IERC20, IERC4626, SafeERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
+import { Math as MathOpenZeppelin } from "lib/openzeppelin-contracts/contracts/contracts/utils/math/Math.sol";
+import { IERC20Metadata } from "lib/openzeppelin-contracts/contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract VaultRouterBranch {
     using SafeERC20 for IERC20;

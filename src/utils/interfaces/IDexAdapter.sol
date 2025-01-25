@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { ISwapAssetConfig } from "@zaros/utils/interfaces/ISwapAssetConfig.sol";
+import { ISwapAssetConfig } from "src/utils/interfaces/ISwapAssetConfig.sol";
 
 /// @notice The struct for the swap exact input single payload.
 /// @param tokenIn The token to swap from.

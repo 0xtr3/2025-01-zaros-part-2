@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Referral } from "@zaros/referral/Referral.sol";
+import { Referral } from "src/referral/Referral.sol";
 
 contract Referral_GetCustomReferralCode_Integration_Test is Base_Test {
     function setUp() public override {

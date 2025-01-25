@@ -2,19 +2,19 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+import { Constants } from "src/utils/Constants.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as convertToUd60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18, convert as convertToUd60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract MarketMakingEngineConfigurationBranch_ConfigureFeeRecipient_Integration_Test is Base_Test {
     function setUp() public virtual override {

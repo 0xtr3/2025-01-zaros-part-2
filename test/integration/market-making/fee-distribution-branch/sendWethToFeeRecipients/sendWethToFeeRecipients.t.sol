@@ -2,19 +2,19 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
+import { Constants } from "src/utils/Constants.sol";
 
 // Openzeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as convertToUd60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18, convert as convertToUd60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract SendWethToFeeRecipients_Integration_Test is Base_Test {
     using EnumerableSet for EnumerableSet.UintSet;

@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
-import { RootUpgrade } from "@zaros/tree-proxy/leaves/RootUpgrade.sol";
-import { Branch } from "@zaros/tree-proxy/leaves/Branch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
+import { RootUpgrade } from "src/tree-proxy/leaves/RootUpgrade.sol";
+import { Branch } from "src/tree-proxy/leaves/Branch.sol";
 
 // Open Zeppelin dependencies
-import { Address } from "@openzeppelin/utils/Address.sol";
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
+import { Address } from "lib/openzeppelin-contracts/contracts/utils/Address.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
 
 library RootUpgrade {
     using EnumerableSet for *;

@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 contract RemoveCollateralFromLiquidationPriority_Unit_Test is Base_Test {

@@ -4,9 +4,9 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Referral } from "@zaros/referral/Referral.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Referral } from "src/referral/Referral.sol";
 
 contract CreateTradingAccount_Integration_Test is Base_Test {
     function setUp() public override {

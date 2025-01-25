@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { SwapExactInputSinglePayload, SwapExactInputPayload } from "@zaros/utils/interfaces/IDexAdapter.sol";
-import { IUniswapV3RouterInterface } from "@zaros/utils/interfaces/IUniswapV3RouterInterface.sol";
-import { BaseAdapter } from "@zaros/utils/dex-adapters/BaseAdapter.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { SwapExactInputSinglePayload, SwapExactInputPayload } from "src/utils/interfaces/IDexAdapter.sol";
+import { IUniswapV3RouterInterface } from "src/utils/interfaces/IUniswapV3RouterInterface.sol";
+import { BaseAdapter } from "src/utils/dex-adapters/BaseAdapter.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
 
 /// @notice Uniswap V3 adapter contract
 contract UniswapV3Adapter is BaseAdapter {

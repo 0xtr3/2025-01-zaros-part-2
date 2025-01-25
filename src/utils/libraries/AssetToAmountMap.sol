@@ -6,10 +6,10 @@ pragma solidity 0.8.25;
 import { Errors } from "../Errors.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 /// @notice Opinionated enumerable map helper to avoid duplicating logic when handling address to uint maps dealing
 /// with assets accounting.

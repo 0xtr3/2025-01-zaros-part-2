@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { MarginCollateralConfiguration } from "@zaros/perpetuals/leaves/MarginCollateralConfiguration.sol";
+import { MarginCollateralConfiguration } from "src/perpetuals/leaves/MarginCollateralConfiguration.sol";
 
 contract MarginCollateralConfiguration_Configure_Test is Base_Test {
     function setUp() public virtual override {

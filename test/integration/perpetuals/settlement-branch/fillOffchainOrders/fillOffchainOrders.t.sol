@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IVerifierProxy } from "@zaros/external/chainlink/interfaces/IVerifierProxy.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { OffchainOrder } from "@zaros/perpetuals/leaves/OffchainOrder.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { SettlementBranch } from "@zaros/perpetuals/branches/SettlementBranch.sol";
+import { IVerifierProxy } from "src/external/chainlink/interfaces/IVerifierProxy.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { OffchainOrder } from "src/perpetuals/leaves/OffchainOrder.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { SettlementBranch } from "src/perpetuals/branches/SettlementBranch.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { ud60x18 } from "@prb-math/UD60x18.sol";
+import { ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract FillOffchainOrders_Integration_Test is Base_Test {
     function setUp() public override {

@@ -2,8 +2,8 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { OrderBranch } from "@zaros/perpetuals/branches/OrderBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { OrderBranch } from "src/perpetuals/branches/OrderBranch.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 contract CancelAllOffchainOrders_Integration_Test is Base_Test {

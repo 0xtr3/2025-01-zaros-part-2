@@ -2,13 +2,13 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 import { Markets } from "script/markets/Markets.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
 
-import { MarketOrderKeeper } from "@zaros/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
+import { MarketOrderKeeper } from "src/external/chainlink/keepers/market-order/MarketOrderKeeper.sol";
 
 contract MarketOrderKeeper_UpdateConfig_Integration_Test is Base_Test {
     function setUp() public override {

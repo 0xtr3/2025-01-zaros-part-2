@@ -3,19 +3,19 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 // Zaros dependencies source
-import { Math } from "@zaros/utils/Math.sol";
-import { WithdrawalRequest } from "@zaros/market-making/leaves/WithdrawalRequest.sol";
-import { VaultRouterBranch } from "@zaros/market-making/branches/VaultRouterBranch.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
+import { Math } from "src/utils/Math.sol";
+import { WithdrawalRequest } from "src/market-making/leaves/WithdrawalRequest.sol";
+import { VaultRouterBranch } from "src/market-making/branches/VaultRouterBranch.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
 
 // Open Zeppelin dependencies
-import { IERC20, IERC4626 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
+import { IERC20, IERC4626 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
 
 // PRB Math
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract Redeem_Integration_Test is Base_Test {
     uint128 constant WITHDRAW_REQUEST_ID = 1;

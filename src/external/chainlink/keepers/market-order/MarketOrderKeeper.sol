@@ -3,15 +3,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
 import { ILogAutomation, Log as AutomationLog } from "../../interfaces/ILogAutomation.sol";
 import { IStreamsLookupCompatible } from "../../interfaces/IStreamsLookupCompatible.sol";
 import { BaseKeeper } from "../BaseKeeper.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { MarketOrder } from "@zaros/perpetuals/leaves/MarketOrder.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { MarketOrder } from "src/perpetuals/leaves/MarketOrder.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 contract MarketOrderKeeper is ILogAutomation, IStreamsLookupCompatible, BaseKeeper {
     using SafeCast for uint256;

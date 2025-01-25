@@ -2,9 +2,9 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { UsdToken } from "@zaros/usd/UsdToken.sol";
+import { UsdToken } from "src/usd/UsdToken.sol";
 
 contract UsdToken_Burn_Test is Base_Test {
     UsdToken token;

@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Math } from "@zaros/utils/Math.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
+import { Math } from "src/utils/Math.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as ud60x18Convert } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, convert as ud60x18Convert } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, ZERO as SD59x18_ZERO } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 contract GetMarkPrice_Integration_Test is Base_Test {
     using SafeCast for uint256;

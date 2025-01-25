@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
+import { Constants } from "src/utils/Constants.sol";
 
 contract MockPriceFeedWithInvalidReturn {
     function decimals() public pure returns (uint8) {

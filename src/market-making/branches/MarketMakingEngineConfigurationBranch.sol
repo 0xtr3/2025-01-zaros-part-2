@@ -2,32 +2,32 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { StabilityConfiguration } from "@zaros/market-making/leaves/StabilityConfiguration.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { Market } from "@zaros/market-making/leaves/Market.sol";
-import { DexSwapStrategy } from "@zaros/market-making/leaves/DexSwapStrategy.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { ZlpVault } from "@zaros/zlp/ZlpVault.sol";
-import { UsdTokenSwapConfig } from "@zaros/market-making/leaves/UsdTokenSwapConfig.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
-import { LiveMarkets } from "@zaros/market-making/leaves/LiveMarkets.sol";
-import { AssetSwapPath } from "@zaros/market-making/leaves/AssetSwapPath.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { StabilityConfiguration } from "src/market-making/leaves/StabilityConfiguration.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { Market } from "src/market-making/leaves/Market.sol";
+import { DexSwapStrategy } from "src/market-making/leaves/DexSwapStrategy.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { ZlpVault } from "src/zlp/ZlpVault.sol";
+import { UsdTokenSwapConfig } from "src/market-making/leaves/UsdTokenSwapConfig.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
+import { LiveMarkets } from "src/market-making/leaves/LiveMarkets.sol";
+import { AssetSwapPath } from "src/market-making/leaves/AssetSwapPath.sol";
 
 // Open Zeppelin Upgradeable dependencies
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 // Open Zeppelin dependencies
-import { EnumerableSet } from "@openzeppelin/utils/structs/EnumerableSet.sol";
-import { EnumerableMap } from "@openzeppelin/utils/structs/EnumerableMap.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { EnumerableSet } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol";
+import { EnumerableMap } from "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableMap.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // TODO: add initializer at upgrade branch or auth branch
 contract MarketMakingEngineConfigurationBranch is OwnableUpgradeable {

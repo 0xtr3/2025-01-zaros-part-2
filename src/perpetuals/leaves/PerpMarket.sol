@@ -2,19 +2,19 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
-import { MarketConfiguration } from "@zaros/perpetuals/leaves/MarketConfiguration.sol";
-import { SettlementConfiguration } from "@zaros/perpetuals/leaves/SettlementConfiguration.sol";
-import { IPriceAdapter } from "@zaros/utils/PriceAdapter.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
+import { MarketConfiguration } from "src/perpetuals/leaves/MarketConfiguration.sol";
+import { SettlementConfiguration } from "src/perpetuals/leaves/SettlementConfiguration.sol";
+import { IPriceAdapter } from "src/utils/PriceAdapter.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as ud60x18Convert } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18, convert as ud60x18Convert } from "lib/prb-math/src/UD60x18.sol";
 import {
     SD59x18,
     sd59x18,
@@ -22,7 +22,7 @@ import {
     UNIT as SD_UNIT,
     ZERO as SD59x18_ZERO,
     convert as sd59x18Convert
-} from "@prb-math/SD59x18.sol";
+} from "lib/prb-math/src/SD59x18.sol";
 
 /// @title The PerpMarket namespace.
 library PerpMarket {

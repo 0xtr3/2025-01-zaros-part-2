@@ -3,18 +3,18 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Math } from "src/utils/Math.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 
 contract ClaimFees_Integration_Test is Base_Test {
     function setUp() public virtual override {

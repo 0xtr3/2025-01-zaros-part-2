@@ -3,11 +3,11 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract ReceiveMarketFee_Integration_Test is Base_Test {
     function setUp() public virtual override {

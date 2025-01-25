@@ -2,9 +2,9 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IAutomationCompatible } from "@zaros/external/chainlink/interfaces/IAutomationCompatible.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { IAutomationCompatible } from "src/external/chainlink/interfaces/IAutomationCompatible.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { BaseKeeper } from "../BaseKeeper.sol";
 
 contract LiquidationKeeper is IAutomationCompatible, BaseKeeper {

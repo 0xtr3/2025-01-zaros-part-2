@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Math } from "@zaros/utils/Math.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
+import { Math } from "src/utils/Math.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18, UNIT as SD_UNIT, unary } from "@prb-math/SD59x18.sol";
+import { ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18, UNIT as SD_UNIT, unary } from "lib/prb-math/src/SD59x18.sol";
 
 // Open Zeppelin dependencies
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 contract GetFundingVelocity_Integration_Test is Base_Test {
     using SafeCast for uint256;

@@ -3,12 +3,12 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
 import { getBranchUpgrades } from "script/utils/TreeProxyUtils.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { PerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { LookupBranch } from "@zaros/tree-proxy/branches/LookupBranch.sol";
-import { PerpMarketBranch } from "@zaros/perpetuals/branches/PerpMarketBranch.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { PerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { LookupBranch } from "src/tree-proxy/branches/LookupBranch.sol";
+import { PerpMarketBranch } from "src/perpetuals/branches/PerpMarketBranch.sol";
 
 contract BranchFunctionSelectos_Integration_Test is Base_Test {
     IPerpsEngine testPerpsEngine;

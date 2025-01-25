@@ -2,9 +2,9 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { Market } from "@zaros/market-making/leaves/Market.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { Market } from "src/market-making/leaves/Market.sol";
+import { Errors } from "src/utils/Errors.sol";
 
 /// @notice EngineAccessControl is an abstract contract that provides access control utility to the market making
 /// engine's branches.

@@ -2,11 +2,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { PerpsEngineConfigurationBranch } from "@zaros/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
-import { PerpMarket } from "@zaros/perpetuals/leaves/PerpMarket.sol";
+import { PerpsEngineConfigurationBranch } from "src/perpetuals/branches/PerpsEngineConfigurationBranch.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
+import { PerpMarket } from "src/perpetuals/leaves/PerpMarket.sol";
 
 contract UpdatePerpMarketConfiguration_Integration_Test is Base_Test {
     function setUp() public override {

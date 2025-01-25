@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { UsdToken } from "@zaros/usd/UsdToken.sol";
+import { UsdToken } from "src/usd/UsdToken.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract UsdToken_Mint_Test is Base_Test {
     UsdToken token;

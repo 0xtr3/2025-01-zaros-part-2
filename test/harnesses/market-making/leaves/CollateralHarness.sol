@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
 
 contract CollateralHarness {
     function exposed_Collateral_load(address asset) external pure returns (Collateral.Data memory) {

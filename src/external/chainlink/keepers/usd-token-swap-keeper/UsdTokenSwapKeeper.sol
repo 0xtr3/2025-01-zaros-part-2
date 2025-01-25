@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { ILogAutomation, Log as AutomationLog } from "@zaros/external/chainlink/interfaces/ILogAutomation.sol";
-import { IStreamsLookupCompatible } from "@zaros/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
+import { ILogAutomation, Log as AutomationLog } from "src/external/chainlink/interfaces/ILogAutomation.sol";
+import { IStreamsLookupCompatible } from "src/external/chainlink/interfaces/IStreamsLookupCompatible.sol";
 import { BaseKeeper } from "../BaseKeeper.sol";
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { UsdTokenSwapConfig } from "@zaros/market-making/leaves/UsdTokenSwapConfig.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { UsdTokenSwapConfig } from "src/market-making/leaves/UsdTokenSwapConfig.sol";
 
 contract UsdTokenSwapKeeper is ILogAutomation, IStreamsLookupCompatible, BaseKeeper {
     /// @notice ERC7201 storage location.

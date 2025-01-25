@@ -3,14 +3,14 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { CreditDelegationBranch } from "@zaros/market-making/branches/CreditDelegationBranch.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { CreditDelegationBranch } from "src/market-making/branches/CreditDelegationBranch.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
 contract CreditDelegationBranch_ConvertMarketsCreditDepositsToUsdc_Integration_Test is Base_Test {
     function setUp() public virtual override {

@@ -2,8 +2,8 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
-import { OrderFees } from "@zaros/perpetuals/leaves/OrderFees.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { OrderFees } from "src/perpetuals/leaves/OrderFees.sol";
 
 abstract contract BtcUsd {
     /// @notice BTCUSD market configuration parameters.

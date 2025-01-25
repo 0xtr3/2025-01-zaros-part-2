@@ -3,12 +3,12 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
 import { getBranchUpgrades } from "script/utils/TreeProxyUtils.sol";
-import { IPerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { PerpsEngine } from "@zaros/perpetuals/PerpsEngine.sol";
-import { Branch } from "@zaros/tree-proxy/leaves/Branch.sol";
-import { LookupBranch } from "@zaros/tree-proxy/branches/LookupBranch.sol";
+import { IPerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { PerpsEngine } from "src/perpetuals/PerpsEngine.sol";
+import { Branch } from "src/tree-proxy/leaves/Branch.sol";
+import { LookupBranch } from "src/tree-proxy/branches/LookupBranch.sol";
 
 contract TestContract is RootProxy {
     constructor(InitParams memory initParams) RootProxy(initParams) { }

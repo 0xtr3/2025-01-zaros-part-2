@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Distribution } from "@zaros/market-making/leaves/Distribution.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
+import { Distribution } from "src/market-making/leaves/Distribution.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
 
 // PRB Math dependencies
-import { UD60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract DistributionHarness {
     function exposed_setActorShares(uint128 vaultId, bytes32 actorId, UD60x18 newActorShares) external {

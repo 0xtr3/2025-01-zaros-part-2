@@ -3,19 +3,19 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { ITradingAccountNFT } from "@zaros/trading-account-nft/interfaces/ITradingAccountNFT.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
-import { TradingAccount } from "@zaros/perpetuals/leaves/TradingAccount.sol";
-import { PerpsEngineConfiguration } from "@zaros/perpetuals/leaves/PerpsEngineConfiguration.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { IReferral } from "@zaros/referral/interfaces/IReferral.sol";
+import { ITradingAccountNFT } from "src/trading-account-nft/interfaces/ITradingAccountNFT.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
+import { TradingAccount } from "src/perpetuals/leaves/TradingAccount.sol";
+import { PerpsEngineConfiguration } from "src/perpetuals/leaves/PerpsEngineConfiguration.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { IReferral } from "src/referral/interfaces/IReferral.sol";
 
 // Open Zeppelin dependencies
-import { Initializable } from "@openzeppelin-upgradeable/proxy/utils/Initializable.sol";
-import { OwnableUpgradeable } from "@openzeppelin-upgradeable/access/OwnableUpgradeable.sol";
+import { Initializable } from "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol";
+import { OwnableUpgradeable } from "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract TradingAccountBranchTestnet is TradingAccountBranch, Initializable, OwnableUpgradeable {
     using TradingAccount for TradingAccount.Data;

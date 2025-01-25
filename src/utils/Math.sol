@@ -5,8 +5,8 @@ pragma solidity 0.8.25;
 import { Constants } from "./Constants.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
-import { SD59x18, sd59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18, sd59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 library Math {
     function divUp(SD59x18 a, SD59x18 b) internal pure returns (SD59x18) {

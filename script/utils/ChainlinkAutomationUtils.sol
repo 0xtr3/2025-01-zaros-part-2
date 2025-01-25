@@ -2,14 +2,14 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { LiquidationKeeper } from "@zaros/external/chainlink/keepers/liquidation/LiquidationKeeper.sol";
-import { FeeConversionKeeper } from "@zaros/external/chainlink/keepers/fee-conversion-keeper/FeeConversionKeeper.sol";
+import { LiquidationKeeper } from "src/external/chainlink/keepers/liquidation/LiquidationKeeper.sol";
+import { FeeConversionKeeper } from "src/external/chainlink/keepers/fee-conversion-keeper/FeeConversionKeeper.sol";
 
 // Open Zeppelin dependencies
-import { ERC1967Proxy } from "@openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
-import { IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
+import { ERC1967Proxy } from "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
-import "forge-std/console.sol";
+import "lib/forge-std/src/console.sol";
 
 struct RegistrationParams {
     string name;

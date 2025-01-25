@@ -2,10 +2,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { ICurveSwapRouter } from "@zaros/utils/interfaces/ICurveSwapRouter.sol";
+import { ICurveSwapRouter } from "src/utils/interfaces/ICurveSwapRouter.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/extensions/ERC4626.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
 
 /// @title mock Curve Strategy Router
 /// @notice Router for stateless execution of swaps against Curve Finance

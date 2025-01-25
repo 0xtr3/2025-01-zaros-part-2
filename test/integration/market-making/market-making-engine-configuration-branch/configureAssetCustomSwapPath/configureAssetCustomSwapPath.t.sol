@@ -2,16 +2,16 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
+import { Errors } from "src/utils/Errors.sol";
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
-import { IDexAdapter } from "@zaros/utils/interfaces/IDexAdapter.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+import { IDexAdapter } from "src/utils/interfaces/IDexAdapter.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract MarketMakingEngineConfigurationBranch_ConfigureAssetCustomSwapPath_Integration_Test is Base_Test {
     function setUp() public virtual override {

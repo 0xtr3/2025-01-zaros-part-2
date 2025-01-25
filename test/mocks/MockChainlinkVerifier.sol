@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IFeeManager } from "@zaros/external/chainlink/interfaces/IFeeManager.sol";
+import { IFeeManager } from "src/external/chainlink/interfaces/IFeeManager.sol";
 
 contract MockChainlinkVerifier {
     IFeeManager public immutable s_feeManager;

@@ -2,11 +2,11 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
+import { Constants } from "src/utils/Constants.sol";
 import { Base_Test } from "test/Base.t.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18 } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18 } from "lib/prb-math/src/UD60x18.sol";
 
 contract MarginCollateralConfiguration_ConvertUd60x18ToTokenAmount_Test is Base_Test {
     function setUp() public virtual override {

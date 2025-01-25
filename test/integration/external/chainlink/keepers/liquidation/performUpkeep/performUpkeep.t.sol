@@ -3,8 +3,8 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { LiquidationKeeper } from "@zaros/external/chainlink/keepers/liquidation/LiquidationKeeper.sol";
-import { LiquidationBranch } from "@zaros/perpetuals/branches/LiquidationBranch.sol";
+import { LiquidationKeeper } from "src/external/chainlink/keepers/liquidation/LiquidationKeeper.sol";
+import { LiquidationBranch } from "src/perpetuals/branches/LiquidationBranch.sol";
 
 contract LiquidationKeeper_PerformUpkeep_Integration_Test is Base_Test {
     function setUp() public override {

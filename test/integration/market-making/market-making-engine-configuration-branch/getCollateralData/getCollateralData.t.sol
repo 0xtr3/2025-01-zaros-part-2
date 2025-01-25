@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";

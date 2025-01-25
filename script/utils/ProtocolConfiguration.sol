@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Constants } from "@zaros/utils/Constants.sol";
+import { Constants } from "src/utils/Constants.sol";
 import { Markets } from "script/markets/Markets.sol";
 import { Vaults } from "script/vaults/Vaults.sol";
 import { MarginCollaterals } from "script/margin-collaterals/MarginCollaterals.sol";
@@ -11,8 +11,8 @@ import { PerpMarketsCreditConfig } from "script/perp-markets-credit-config/PerpM
 import { DexAdapterUtils } from "script/utils/DexAdapterUtils.sol";
 
 // PRB Math dependencies
-import { uMAX_UD60x18 as LIB_uMAX_UD60x18 } from "@prb-math/UD60x18.sol";
-import { uMAX_SD59x18 as LIB_uMAX_SD59x18, uMIN_SD59x18 as LIB_uMIN_SD59x18 } from "@prb-math/SD59x18.sol";
+import { uMAX_UD60x18 as LIB_uMAX_UD60x18 } from "lib/prb-math/src/UD60x18.sol";
+import { uMAX_SD59x18 as LIB_uMAX_SD59x18, uMIN_SD59x18 as LIB_uMIN_SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 abstract contract ProtocolConfiguration is
     Markets,

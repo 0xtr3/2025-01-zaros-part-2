@@ -6,7 +6,7 @@ import { Base_Test } from "test/Base.t.sol";
 import { MockERC20 } from "test/mocks/MockERC20.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as ud60x18Convert } from "@prb-math/UD60x18.sol";
+import { UD60x18, ud60x18, convert as ud60x18Convert } from "lib/prb-math/src/UD60x18.sol";
 
 contract WithdrawMarginUsd_Unit_Test is Base_Test {
     function setUp() public override {

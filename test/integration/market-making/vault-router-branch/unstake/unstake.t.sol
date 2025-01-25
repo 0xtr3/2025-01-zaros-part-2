@@ -5,12 +5,12 @@ pragma solidity 0.8.25;
 import { Base_Test } from "test/Base.t.sol";
 
 // Zaros dependencies source
-import { VaultRouterBranch } from "@zaros/market-making/branches/VaultRouterBranch.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { FeeDistributionBranch } from "@zaros/market-making/branches/FeeDistributionBranch.sol";
+import { VaultRouterBranch } from "src/market-making/branches/VaultRouterBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { FeeDistributionBranch } from "src/market-making/branches/FeeDistributionBranch.sol";
 
 // Open Zeppelin dependencies
-import { IERC20 } from "@openzeppelin/token/ERC20/IERC20.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 
 contract Unstake_Integration_Test is Base_Test {
     function setUp() public virtual override {

@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { Base_Test } from "test/Base.t.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
 
 contract CreditDelegationBranch_UpdateMarketCreditDelegations_Integration_Test is Base_Test {
     function setUp() public override {

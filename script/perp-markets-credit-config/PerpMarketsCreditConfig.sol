@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { IMarketMakingEngine } from "@zaros/market-making/MarketMakingEngine.sol";
-import { RootProxy } from "@zaros/tree-proxy/RootProxy.sol";
+import { IMarketMakingEngine } from "src/market-making/MarketMakingEngine.sol";
+import { RootProxy } from "src/tree-proxy/RootProxy.sol";
 import { MockUsdToken } from "test/mocks/MockUsdToken.sol";
 
 // Mock dependencies
 import { MockEngine } from "test/mocks/MockEngine.sol";
 
 // Forge dependencies
-import { StdCheats, StdUtils } from "forge-std/Test.sol";
+import { StdCheats, StdUtils } from "lib/forge-std/src/Test.sol";
 
 // Markets
 import { BtcPerpMarketCreditConfig } from "script/perp-markets-credit-config/BtcPerpMarketCreditConfig.sol";

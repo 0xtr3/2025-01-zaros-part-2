@@ -2,7 +2,7 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { CustomReferralConfiguration } from "@zaros/referral/leaves/CustomReferralConfiguration.sol";
+import { CustomReferralConfiguration } from "src/referral/leaves/CustomReferralConfiguration.sol";
 
 library ReferralConfiguration {
     /// @notice ERC7201 storage location.

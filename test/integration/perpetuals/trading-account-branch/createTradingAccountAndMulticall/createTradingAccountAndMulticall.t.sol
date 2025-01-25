@@ -3,10 +3,10 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { Errors } from "@zaros/utils/Errors.sol";
-import { TradingAccountBranch } from "@zaros/perpetuals/branches/TradingAccountBranch.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { TradingAccountBranch } from "src/perpetuals/branches/TradingAccountBranch.sol";
 import { Base_Test } from "test/Base.t.sol";
-import { Referral } from "@zaros/referral/Referral.sol";
+import { Referral } from "src/referral/Referral.sol";
 
 contract CreateTradingAccountAndMulticall_Integration_Test is Base_Test {
     function setUp() public override {

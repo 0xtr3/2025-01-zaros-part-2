@@ -3,14 +3,14 @@ pragma solidity 0.8.25;
 
 // Zaros dependencies
 import { MarketMakingEngineConfigurationBranch } from
-    "@zaros/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
+    "src/market-making/branches/MarketMakingEngineConfigurationBranch.sol";
 
 // Zaros dependencies test
 import { Base_Test } from "test/Base.t.sol";
 
 // Open Zeppelin dependencies
-import { Ownable } from "@openzeppelin/access/Ownable.sol";
-import { IERC20 } from "@openzeppelin/token/ERC20/ERC20.sol";
+import { Ownable } from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+import { IERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
 contract MarketMakingEngineConfigurationBranch_UpdateVaultAssetAllowance_Integration_Test is Base_Test {
     function setUp() public virtual override {

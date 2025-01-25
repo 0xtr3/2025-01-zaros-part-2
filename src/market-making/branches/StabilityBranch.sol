@@ -2,25 +2,25 @@
 pragma solidity 0.8.25;
 
 // Zaros dependencies
-import { UsdToken } from "@zaros/usd/UsdToken.sol";
-import { Constants } from "@zaros/utils/Constants.sol";
-import { Errors } from "@zaros/utils/Errors.sol";
-import { Math } from "@zaros/utils/Math.sol";
-import { Collateral } from "@zaros/market-making/leaves/Collateral.sol";
-import { Vault } from "@zaros/market-making/leaves/Vault.sol";
-import { MarketMakingEngineConfiguration } from "@zaros/market-making/leaves/MarketMakingEngineConfiguration.sol";
-import { UsdTokenSwapConfig } from "@zaros/market-making/leaves/UsdTokenSwapConfig.sol";
-import { StabilityConfiguration } from "@zaros/market-making/leaves/StabilityConfiguration.sol";
-import { EngineAccessControl } from "@zaros/utils/EngineAccessControl.sol";
+import { UsdToken } from "src/usd/UsdToken.sol";
+import { Constants } from "src/utils/Constants.sol";
+import { Errors } from "src/utils/Errors.sol";
+import { Math } from "src/utils/Math.sol";
+import { Collateral } from "src/market-making/leaves/Collateral.sol";
+import { Vault } from "src/market-making/leaves/Vault.sol";
+import { MarketMakingEngineConfiguration } from "src/market-making/leaves/MarketMakingEngineConfiguration.sol";
+import { UsdTokenSwapConfig } from "src/market-making/leaves/UsdTokenSwapConfig.sol";
+import { StabilityConfiguration } from "src/market-making/leaves/StabilityConfiguration.sol";
+import { EngineAccessControl } from "src/utils/EngineAccessControl.sol";
 
 // Open Zeppelin dependencies
-import { IERC20, SafeERC20 } from "@openzeppelin/token/ERC20/utils/SafeERC20.sol";
-import { IERC4626 } from "@openzeppelin/interfaces/IERC4626.sol";
-import { SafeCast } from "@openzeppelin/utils/math/SafeCast.sol";
+import { IERC20, SafeERC20 } from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
+import { IERC4626 } from "lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol";
+import { SafeCast } from "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol";
 
 // PRB Math dependencies
-import { UD60x18, ud60x18, convert as ud60x18Convert } from "@prb-math/UD60x18.sol";
-import { SD59x18 } from "@prb-math/SD59x18.sol";
+import { UD60x18, ud60x18, convert as ud60x18Convert } from "lib/prb-math/src/UD60x18.sol";
+import { SD59x18 } from "lib/prb-math/src/SD59x18.sol";
 
 contract StabilityBranch is EngineAccessControl {
     using Collateral for Collateral.Data;
